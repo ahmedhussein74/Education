@@ -10,7 +10,8 @@ app.use(express.json());
 app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: true }));
 
-require("./routes/studentRoute")(app);
+require("./routes/userRoute")(app);
+require("./routes/lectureRoute")(app);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
