@@ -18,17 +18,18 @@ db.sequelize = sequelize;
 
 db.users = require("./userModel")(sequelize, DataTypes);
 db.lectures = require("./lectureModel")(sequelize, DataTypes);
+db.enrollments = require("./enrollmentModel")(sequelize, DataTypes);
 
 db.users.belongsToMany(db.lectures, {
-  through: "registed_lectures",
+  through: "Enrollment",
   as: "lectures",
-  foreignKey: "user_id",
+  foreignKey: "userId",
 });
 
 db.lectures.belongsToMany(db.users, {
-  through: "registed_lectures",
+  through: "Enrollment",
   as: "users",
-  foreignKey: "lecture_id",
+  foreignKey: "lectureId",
 });
 
 sequelize

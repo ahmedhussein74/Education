@@ -12,6 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 
 require("./routes/userRoute")(app);
 require("./routes/lectureRoute")(app);
+require("./routes/enrollmentRoute")(app);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

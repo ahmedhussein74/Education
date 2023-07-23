@@ -2,7 +2,8 @@ module.exports = (app) => {
   const router = require("express").Router();
   const lecture = require("../controllers/lectureController");
 
-  router.route("/").post(lecture.createLecture).get(lecture.getLectures);
+  router.get("/", lecture.getLectures);
+  router.post("/", lecture.createLecture);
   router
     .route("/:id")
     .get(lecture.getLecture)
