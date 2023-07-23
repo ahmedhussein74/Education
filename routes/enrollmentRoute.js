@@ -4,8 +4,8 @@ module.exports = (app) => {
 
   router.post("/createenrollment", enrollment.createEnrollment);
   router.get("/", enrollment.getAllUsersWithLectures);
-  router.get("/userlectures", enrollment.getAllUserLectures);
-  router.get("/lectureusers", enrollment.getAllLectureUsers);
+  router.get("/userlectures/:id", enrollment.getAllUserLectures);
+  router.get("/lectureusers/:id", enrollment.getAllLectureUsers);
   
   app.use("/api/enrollments", router);
 };
