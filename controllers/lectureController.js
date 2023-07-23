@@ -43,6 +43,7 @@ exports.updateLecture = async (req, res) => {
     if (!lecture) {
       return res.status(404).json({ error: "Lecture not found" });
     }
+    await lecture.update(req.body, { where: { id } });
     res.status(200).json(lecture);
   } catch (error) {
     res.status(500).json({ error });
