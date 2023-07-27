@@ -1,8 +1,8 @@
 module.exports = {
-  HOST: "containers-us-west-38.railway.app",
-  USER: "root",
-  PASSWORD: "DkObSuAmdvYEPBssvZJf",
-  DB: "railway",
+  HOST: "bhbb7ydlz0fb0npk0zo9-mysql.services.clever-cloud.com",
+  USER: "ukgz19tgxozxh118",
+  PASSWORD: "7Mp0YtT4xfLlhtHBcKO1",
+  DB: "bhbb7ydlz0fb0npk0zo9",
   dialect: "mysql",
   pool: {
     max: 5,
